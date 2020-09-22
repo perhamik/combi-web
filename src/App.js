@@ -45,21 +45,23 @@ class Toggle extends React.Component {
 export default function App() {    
     return (    
         <>                
-            <Container className="container-main">
+            <div className="container-main">
                 <Router>                    
                     <Toggle></Toggle>
                     <NaviBar></NaviBar>
-                    <Switch>
-                        <div className="d-flex h-100 container-fh">
-                            <Route exact path="/" component={Home}></Route>
-                            <Route exact path="/catalogue" component={Catalogue}></Route>
-                            <Route exact path="/about" component={About}></Route>
-                            <Route exact path="/buy" component={Buy}></Route>
-                        </div>
-                    </Switch>        
+                    <Container>
+                        <Switch>
+                            <div className="d-flex h-100 container-fh">
+                                <Route exact path="/" component={Home}></Route>
+                                <Route exact path="/catalogue" component={Catalogue}></Route>
+                                <Route exact path="/about" component={About}></Route>
+                                <Route exact path="/buy" component={Buy}></Route>
+                            </div>
+                        </Switch>
+                    </Container>       
                     <FooterComp></FooterComp>
                 </Router>           
-            </Container>
+            </div>
         </>       
     );
 }
