@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="9a60e4b2-f73e-11ea-8410-0242ac110005"
+   version="1.1"
+   width="185pt"
+   viewBox="0 0 185.00001 50"
+   height="50pt"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview3739"
+     showgrid="false"
+     inkscape:zoom="0.75544332"
+     inkscape:cx="396.85038"
+     inkscape:cy="561.25985"
+     inkscape:window-x="-8"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="9a60e4b2-f73e-11ea-8410-0242ac110005" />
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs23" />
+  <g
+     id="g2"
+     transform="translate(0,-791.88981)" />
+  <g
+     id="g14"
+     transform="translate(-205.10935,-396.77913)">
+    <g
+       id="g12">
+      <g
+         id="g10">
+        <g
+           id="g8">
+          <g
+             id="g6">
+            <path
+               id="path4"
+               d="m 219.4665,423.0788 c 0,-11.7814 7.3372,-14.2619 13.1244,-14.2619 5.7875,0 11.4718,4.134 11.4718,4.134 l 0.5165,-6.7175 c 0,0 -2.687,-2.5835 -14.8819,-2.5835 -12.1949,0 -22.4257,7.6475 -22.4257,19.5324 0,13.6414 14.6749,19.2226 23.4595,19.2226 8.784,0 14.3648,-3.7208 14.3648,-3.7208 v -6.9239 c 0,0 -5.6843,4.3401 -12.1949,4.3401 -4.0303,0 -13.4345,-1.2404 -13.4345,-13.0215 z m 46.7118,-9.0944 v 0 c -8.3712,0 -17.5688,2.687 -17.5688,13.4351 0,10.7481 8.8877,14.6747 17.9818,14.6747 9.0944,0 17.3625,-6.0976 17.3625,-14.5721 0,-8.4736 -6.5109,-13.5377 -17.7755,-13.5377 z m 0.3101,23.2526 v 0 c -2.4806,0 -6.6143,-1.963 -6.6143,-9.0938 0,-7.1314 1.9633,-9.8184 6.4074,-9.8184 4.4436,0 6.4077,2.8939 6.4077,9.7149 0,6.8202 -3.7207,9.1973 -6.2008,9.1973 z m 54.3595,-22.6324 v 0 c -7.5442,0 -10.0245,3.3072 -10.0245,3.3072 0,0 -3.5138,-3.5138 -9.6114,-3.5138 -6.097,0 -13.538,1.3433 -13.538,1.3433 v 25.4877 h 9.9207 c 0,0 0,-17.1173 0,-19.597 0,-2.48 7.0274,-3.1003 7.0274,0 0,3.1011 0,19.597 0,19.597 H 314.75 c 0,0 0,-17.2207 0,-19.4935 0,-2.274 7.0274,-3.3072 7.0274,0 0,3.3071 0,19.4935 0,19.4935 h 9.7149 c 0,0 0,-16.7031 0,-21.2504 0,-4.5474 -7.1309,-5.374 -10.6444,-5.374 z m 33.2634,1.0848 v 0 c -4.7537,0 -7.4276,0 -7.4276,0 v -12.0395 h -11.8848 c 0,0 2.0673,1.6534 2.0673,5.2707 0,2.5835 0,30.7967 0,30.7967 0,0 1.6534,2.5841 12.505,2.5841 10.8505,0 16.5351,-8.9912 16.5351,-15.3987 0,-6.4074 -3.295,-11.2133 -11.795,-11.2133 z m -4.1043,21.3412 v 0 c -1.6534,0 -3.2199,0 -3.2199,0 v -17.827 c 0,0 2.255,0 3.8058,0 3.2245,0 5.2889,3.7715 5.2889,8.9396 0,5.167 -2.749,8.8874 -5.8748,8.8874 z m 31.6075,-37.4113 v 0 c -3.3069,0 -7.2346,1.3436 -7.2346,4.4438 0,4.6509 3.1008,3.4473 3.1008,7.1309 0,2.2737 -7.3369,4.6508 -7.3369,4.6508 v 25.3842 h 9.6103 c 0,0 0,-19.1834 0,-26.0044 0,-6.8208 8.5779,-5.374 8.5779,-10.438 0,-2.5838 -3.4109,-5.1673 -6.7175,-5.1673 z"
+               style="fill:#ee7523;fill-rule:evenodd"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g16"
+     transform="translate(0,-791.88981)" />
+  <g
+     id="g18"
+     transform="translate(0,-791.88981)" />
+</svg>

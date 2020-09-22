@@ -1,0 +1,219 @@
+body{  
+  background-color: rgba(255, 115, 0, 0.05);
+}
+body, #root{
+  height: 100vh;
+}
+.container-main{
+  padding: 0;
+}
+.container-main > *{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.container-fh{
+  background-color: #fff;
+  padding-bottom: 5rem;  
+}
+.page-title,
+.cat-line:not(:first-child){
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #ff7300;
+}
+.cat-line:first-child{
+  color:#212121;
+  margin-top: 1rem;
+  border-bottom: 3px solid #ff7300;
+}
+.cat-line > .row{
+  margin-bottom: 1.5rem;
+}
+.cat-title{
+  padding-bottom: 1rem;
+}
+span.navbar-brand > img{
+  transition: filter .6s;
+  filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .2));
+}
+nav .navbar-nav a,
+.text-hover{
+  color:#212121;
+  transition: color .5s;
+  cursor: pointer;
+}
+nav .navbar-nav a:hover,
+.text-hover:hover{
+  text-decoration: none;
+}
+nav .navbar-nav > a,
+.text-hover{
+  position: relative;
+}
+nav .navbar-nav > a:after,
+.text-hover:after{
+  content:'';
+  display: block;
+  position: absolute;    
+  width: 0%;
+  height: 2px; 
+  background-color: #ff7300;
+  opacity: 1;
+  transition-property: opacity, width;
+  transition-duration: .8s, .6s;
+  transition-delay: .1s, .1s;
+}
+.image-hover img,
+img.image-hover{
+  border: 1px solid rgba(255, 255, 255, 0.0);
+  box-sizing: border-box;
+  object-fit: cover;
+  transition-property: border;
+  transition-duration: .6s;
+  transition-delay: .3s;
+}
+.image-main{
+  max-width: 11rem;
+}
+.image-list{
+  max-width: 13rem;
+}
+.product-title{
+  font-size:0.9rem;
+  color:black;
+  cursor: default;
+}
+.toggle-container{
+  display: none;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+}
+.toggle-container p{
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.toggle-section{
+  height: 36px;
+}
+.toggle-btn{
+    position: relative;
+    width: 145px;
+    height: 74px;
+    margin: 0 auto;
+    border-radius: 40px;
+    transform: scale(0.3);
+    bottom:50%;
+}
+
+.toggle-section input[type="checkbox"]
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* First toggle btn */
+
+.toggle-btn > span
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #fff;
+    box-shadow: 0px 2px 25px #d9d9d9;
+    border-radius: 40px;
+    transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+.toggle-btn > span:before, .toggle-btn > span:after
+{
+    content: '';
+    position: absolute;
+    top: 8px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+.toggle-btn > span:before
+{
+    background-color: #fff;
+    transform: translate(-58px,0px);
+    z-index: 1;
+}
+
+.toggle-btn > span:after
+{
+    background-color: #000;
+    transform: translate(8px,0px);
+    z-index: 0;
+}
+
+.toggle-btn > input[type="checkbox"]:checked + span
+{
+    background-color: #000;
+}
+
+.toggle-btn > input[type="checkbox"]:active + span
+{
+    opacity: 0.5;
+}
+
+.toggle-btn > input[type="checkbox"]:checked + span:before
+{
+    background-color: #000;
+    transform: translate(56px,-19px);
+}
+
+.toggle-btn > input[type="checkbox"]:checked + span:after
+{
+    background-color: #fff;
+    transform: translate(79px,0px);
+}
+.description-text{
+  text-align: justify;
+}
+@media screen and (max-width: 767px){
+  nav .navbar-nav > a:after{ 
+    display: none;    
+  }
+}
+@media screen and (min-width: 768px){
+  span.navbar-brand:hover > img{    
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .7));
+  }
+  nav .navbar-nav a:hover,
+  .text-hover:hover{
+    color:#ff7300;
+  }
+  nav .navbar-nav > a:after,
+  .text-hover:after{
+    right: 0;
+    width: 0%;    
+    opacity: 0;    
+  }
+  nav .navbar-nav > a:hover:after,
+  .text-hover:hover:after{
+    width: 100%;
+    opacity: 1;
+  }
+  .image-hover:hover img,
+  img.image-hover:hover{
+    border: 1px solid #ff7300;
+  }
+}
