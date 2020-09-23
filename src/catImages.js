@@ -77,17 +77,28 @@ const parentingStation= [
     {img: img_116432, title: "Fealetto Auto Swing"},
     {img: img_116417, title: "Nemulila Auto Swing"}
 ];
-
-export class Strollers extends React.Component{    
-    render(){ return mapCatalog(strollers, 3, Data.mainCat[0]);}
+const preCount = 3;
+export class Strollers extends React.Component{ 
+    constructor(props) {
+        super(props);
+        this.state = {width: props.width};
+      }
+    
+      componentWillMount(){
+        this.setState({width: window.innerWidth});
+      }
+      
+    render(){     console.log(this.state.width);   
+        return mapCatalog(strollers, preCount, Data.mainCat[0]);
+    }
 }
 
 export class CarSeats extends React.Component{
-    render(){ return mapCatalog(carSeats, 3, Data.mainCat[1]);}
+    render(){ return mapCatalog(carSeats, preCount, Data.mainCat[1]);}
 }
 
 export class ParentingStation extends React.Component{
-    render(){ return mapCatalog(parentingStation, 3, Data.mainCat[2]);}
+    render(){ return mapCatalog(parentingStation, preCount, Data.mainCat[2]);}
 }
 
 let fillImages = (arr, count = arr.length) => {
@@ -123,3 +134,5 @@ let mapCatalog = (arr, count, title) =>{
         </Col>
     )
 }
+
+

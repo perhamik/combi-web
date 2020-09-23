@@ -1,41 +1,25 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import slide1 from '../wallpaper.jpg';
-import slide2 from '../wallpaper2.jpg';
-import slide3 from '../wallpaper3.jpg';
+import sl1 from '../SliderImg/slide1.jpg';
+import sl2 from '../SliderImg/slide2.jpg';
+import sl3 from '../SliderImg/slide3.jpg';
+import sl4 from '../SliderImg/slide4.jpg';
+import sl5 from '../SliderImg/slide5.jpg';
 
-export default function Slider(){
-    return(
-        <> 
-            <Carousel>
-                <Carousel.Item>
-                    <img className="d-block w-100" 
-                            src={slide1}
-                            alt="First slide" />
-                    <Carousel.Caption>
-                        <h3>Slide 1</h3>
-                        <p>Description of item 1</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" 
-                            src={slide2}
-                            alt="First slide" />
-                    <Carousel.Caption>
-                        <h3>Slide 2</h3>
-                        <p>Description of item 2</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className="d-block w-100" 
-                            src={slide3}
-                            alt="First slide" />
-                    <Carousel.Caption>
-                        <h3>Slide 3</h3>
-                        <p>Description of item 3</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-        </>
+class Slider extends React.Component{
+    render(){
+        const images = [sl1, sl2, sl3, sl4, sl5];        
+        return <Carousel>{images.map(generateSlide)}</Carousel>
+    }
+}
+function generateSlide(item){
+    return (
+        <Carousel.Item>
+            <img className="d-block w-100" 
+                    src={item}
+                    alt="Slide content" />            
+        </Carousel.Item>
     )
 }
+
+export default Slider;
