@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import Data from './Components/Data';
 
@@ -78,27 +78,63 @@ const parentingStation= [
     {img: img_116417, title: "Nemulila Auto Swing"}
 ];
 const preCount = 3;
-export class Strollers extends React.Component{ 
+let newCount = preCount;
+const sm = 576;
+const md = 768;
+const lg = 992;
+
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+  function ShowWindowDimensions(props) {
+    const [width, height] = useWindowSize();
+    return <span>Window size: {width} x {height}</span>;
+  }/*
+class ScreenSize extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {width: props.width};
-      }
-    
-      componentWillMount(){
-        this.setState({width: window.innerWidth});
-      }
-      
-    render(){     console.log(this.state.width);   
-        return mapCatalog(strollers, preCount, Data.mainCat[0]);
+        this.state = {width: props.width, screen:1};
     }
+    
+    componentWillMount(){
+        this.setState({width: window.innerWidth});
+        this.setState({screen: window.innerWidth > lg ? preCount : window.innerWidth > md ? preCount-1 : window.innerWidth > sm ? preCount-1 : preCount-2});        
+        newCount = this.state.screen;
+    }      
+}*/
+export class ScreenSize extends React.Component {
+    static state = { width: 0, screen: preCount };    
+    updateDimensions = () => {
+      this.setState({ width: window.innerWidth});
+      this.setState({ screen: window.innerWidth > lg ? preCount : window.innerWidth > md ? preCount-1 : window.innerWidth > sm ? preCount-1 : preCount-2});        
+    };
+    componentWillMount() {
+      window.addEventListener('resize', this.updateDimensions);
+      this.updateDimensions();
+    }    
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.updateDimensions);
+    }        
+  }
+export class Strollers extends ScreenSize{   
+    render() { return mapCatalog(strollers, this.state.screen, Data.mainCat[0]); }
 }
 
-export class CarSeats extends React.Component{
-    render(){ return mapCatalog(carSeats, preCount, Data.mainCat[1]);}
+export class CarSeats extends ScreenSize{
+    render(){ return mapCatalog(carSeats, this.state.screen, Data.mainCat[1]);}
 }
 
-export class ParentingStation extends React.Component{
-    render(){ return mapCatalog(parentingStation, preCount, Data.mainCat[2]);}
+export class ParentingStation extends ScreenSize{
+    render(){ return mapCatalog(parentingStation, this.state.screen, Data.mainCat[2]);}
 }
 
 let fillImages = (arr, count = arr.length) => {
@@ -122,17 +158,29 @@ let fillImages = (arr, count = arr.length) => {
     )
 }
 
-let mapCatalog = (arr, count, title) =>{
-    return (   
-        <Col className="cat-line col-12 d-flex flex-column-reverse">
+let mapCatalog = (arr, count, title) => {
+    return <CategoryBlock arr={arr} count={count} title={title}></CategoryBlock>
+}
+class CategoryBlock extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {arr: props.arr, count: props.count, title: props.title};      
+    }
+    buttonClick = () => {
+        this.setState({count: this.state.count === null ? this.props.count : null});
+    }        
+    
+    render() {
+        return (
+        <Col className="item-row cat-line col-12 d-flex flex-column-reverse">
             <div className="cat-title align-self-center align-self-md-end mr-md-4">
-                <Button variant="outline-dark" size="lg">{title}</Button>
+                <Button onClick={this.buttonClick} variant="outline-dark" size="lg">{this.state.title}</Button>
             </div>
             <Row className="align-items-center justify-content-between">
-                {fillImages(arr, count)}
+                {this.state.count === null ? fillImages(this.state.arr) : fillImages(this.state.arr, this.state.count)}
             </Row>
-        </Col>
-    )
+        </Col>            
+    )}
 }
 
 

@@ -36,8 +36,7 @@ span.navbar-brand > img{
   transition: filter .6s;
   filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .2));
 }
-nav .navbar-nav a,
-.text-hover{
+nav .navbar-nav a{
   color:#212121;
   transition: color .5s;
   cursor: pointer;
@@ -63,8 +62,10 @@ nav .navbar-nav > a:after,
   transition-duration: .8s, .6s;
   transition-delay: .1s, .1s;
 }
-.image-hover img,
-img.image-hover{
+.item-hover{
+  cursor: pointer;
+}
+.item-hover img{
   border: 1px solid rgba(255, 255, 255, 0.0);
   box-sizing: border-box;
   object-fit: cover;
@@ -77,6 +78,10 @@ img.image-hover{
 }
 .image-list{
   max-width: 13rem;
+}
+.item-row, .item-row *{
+  transition: all .6s linear;
+  min-height: 0;
 }
 .product-title{
   font-size:0.9rem;
@@ -198,7 +203,7 @@ img.image-hover{
     filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .7));
   }
   nav .navbar-nav a:hover,
-  .text-hover:hover{
+  .item-hover:hover .text-hover{
     color:#ff7300;
   }
   nav .navbar-nav > a:after,
@@ -208,12 +213,12 @@ img.image-hover{
     opacity: 0;    
   }
   nav .navbar-nav > a:hover:after,
-  .text-hover:hover:after{
+  .item-hover:hover .text-hover:after{
     width: 100%;
     opacity: 1;
   }
-  .image-hover:hover img,
-  img.image-hover:hover{
-    border: 1px solid #ff7300;
+  .item-hover:hover img,
+  .item-hover:hover .text-hover:after{
+    border: 1px solid #ff7300;  
   }
 }

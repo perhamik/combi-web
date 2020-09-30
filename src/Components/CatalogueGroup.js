@@ -14,7 +14,7 @@ export default function CatalogueGroup(props){
                             return (
                                 <Col key={index} className="col-12 col-sm-11 col-md-6 col-lg-4">
                                     <div className="d-flex justify-content-center align-content-center w-100 p-3 bg-white">
-                                        <div className="d-flex flex-column align-content-center image-hover p-1 text-center overflow-hidden">
+                                        <div className="d-flex flex-column align-content-center item-hover p-1 text-center overflow-hidden">
                                             <div className="pb-3">
                                                 <h5 className="text-hover display-5">{obj}</h5>                                                
                                             </div>
