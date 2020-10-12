@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-import {Strollers, CarSeats, ParentingStation} from './CatImages';
+import {Strollers, CarSeats, ParentingStation} from './catImages';
 
 export const Catalogue = () => (
     <>

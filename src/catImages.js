@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import Data from './Components/Data';
 
+
 import img_111529 from './Catalogue/Strollers/111529.jpg';
 import img_111637 from './Catalogue/Strollers/111637.jpg';
 import img_111638 from './Catalogue/Strollers/111638.jpg';
